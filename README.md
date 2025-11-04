@@ -10,7 +10,7 @@ You can view the live deployed application here:
 **[https://your-project-name.vercel.app](https://your-project-name.vercel.app)**
 *(Replace with your actual Vercel URL)*
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 * **Frontend:** React (Vite), React Router
 * **Backend:** Node.js, Express.js
@@ -179,5 +179,5 @@ All endpoints are prefixed with `/api`. All **Event** and **Swap** routes are pr
 ### Challenges
 
 * **Data Integrity:** The biggest challenge was ensuring the swap logic was atomic. A user accepting a swap triggers multiple database updates, which could fail halfway. This was solved by using a **PostgreSQL transaction** in the `POST /api/swap/response` endpoint.
-* **Deployment Caching:** A significant challenge during deployment was a stubborn cache issue with Vite and Vercel, where outdated versions of `@chakra-ui` were being loaded. This was a development environment issue and was resolved by bypassing the main bundle and importing components from their sub-packages (e.g., `@chakra-ui/alert`). *(We later reverted this for simplicity, but it was a key challenge).*
+* **Deployment Caching:** A significant challenge during deployment was a stubborn cache issue with Vite and Vercel, where outdated versions of `@chakra-ui` were being loaded. This was a development environment issue and was resolved by bypassing the main bundle and importing components from their sub-packages (e.g., `@chakra-ui/alert`). *(I later reverted this for simplicity, but it was a key challenge).*
 * **Case-Sensitivity:** The Vercel (Linux) build environment is case-sensitive, while the local (Windows) environment was not. This led to build failures (e.g., `eventForm` vs. `EventForm.jsx`). This was solved by ensuring all component import paths were explicit and used the exact file name, including the `.jsx` extension.
