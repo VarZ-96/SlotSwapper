@@ -7,8 +7,7 @@ This project was built as a comprehensive web development assignment, demonstrat
 ##  Live Demo
 
 You can view the live deployed application here:
-**[https://your-project-name.vercel.app](https://slot-swapper-chi.vercel.app/)**
-*(Replace with your actual Vercel URL)*
+**[https://slot-swapper-chi.vercel.app/](https://slot-swapper-chi.vercel.app/)**
 
 ##  Tech Stack
 
