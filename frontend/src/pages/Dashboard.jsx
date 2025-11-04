@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import api from '../services/api'; // Import our API helper
-import EventForm from '../components/eventForm'; // Import the form
+import EventForm from '../components/EventForm'; // Import the form
 
 const Dashboard = () => {
   const { user, logout } = useAuth();
